@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/3163f0d569.js" crossorigin="anonymous"></script>
+    <style>
+    
+    </style>
+</head>
+<body>
+    <div>
+        <input type="button" id="green" value="Green" onclick="getGreen()">
+        <input type="button" id="yellow" value="Yellow" onclick="getYellow()">
+        <input type="button" id="red" value="Red" onclick="getRed()">
+    </div>  
+    <img src="https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306386_960_720.png" alt="" id="myImg">
+</body>
+    <script>
+        function getGreen ()
+        {
+            document.getElementById("myImg").src="https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306386_960_720.png"
+        }
+
+        function getRed ()
+        {
+            document.getElementById("myImg").src="https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306388_960_720.png"
+        }
+
+        function getYellow ()
+        {
+            document.getElementById("myImg").src="https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306387_960_720.png"
+        }
+
+
+
+
+
+
+
+
+        /* btn1.onclick = function () {
+            span.style.background("<img src=https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306388_960_720.png>")
+        }
+        btn2.onclick = function () {
+            span.style.background("<img src=https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306387_960_720.png>")
+        }
+        btn3.onclick = function () {
+            span.style.background("<img src=https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306386_960_720.png>")
+        }
+        
+
+        function trafficred(){
+            document.getElementById("red").innerHTML="<img src=https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306388_960_720.png>";
+        }
+        function trafficyellow(){
+            document.getElementById("yellow").innerHTML="<img src=https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306387_960_720.png>";
+        }
+        function trafficgreen(){
+            document.getElementById("green").innerHTML="<img src=https://cdn.pixabay.com/photo/2014/04/02/14/10/traffic-light-306386_960_720.png>";
+        } */
+    </script>
+</html>
+
