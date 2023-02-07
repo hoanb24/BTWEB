@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <style>
+        .card-img-top{
+            width: 280px;
+            height: 300px;
+        }
+        .card-title{
+            text-align: center;
+        }
+        .card-text {
+            text-align: center;
+        }
+        .btnX {
+            text-align: center;
+        }
+
+        #women {
+            margin-top: 20px;
+        }
+
+        .cancle{
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row" id = "men">
+            <div class="col-12">
+                <button  type="button" class="btn btn-outline-info" onclick="men()">THỜI TRANG NAM</button>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row" id="women">
+            <div class="col-12">
+                <button type="button" class="btn btn-outline-info" onclick="women()">THỜI TRANG NỮ</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var fmen = [
+        {
+            id:1,
+            name:"The cosmo (Đen) Quần short kaki",
+            code:"TC1022011BA",
+            price: "250.000Đ",
+            image:"https://image.voso.vn/users/vosoimage/images/aed966859e57e97a3f9334e2e506318f?t%5B0%5D=compress%3Alevel%3D100&accessToken=b4f2b30478859189029a45d346414b3da22fba304e33cd3fec904bf801f407bf",
+            status : "Nam"
+        },
+        {
+            id:2,
+            name:"Quần baggy đen sang trọng QQ",
+            code:"TC1022011BA",
+            price: "398.000Đ",
+            image:"https://hidanz.com/wp-content/uploads/2021/05/phoi-quan-baggy-3.jpg",
+            status : "Nam"
+        },
+        {
+            id:3,
+            name:"The Cosmo (Đen) Quần short kaki",
+            code:"TC1022011BA",
+            price: "300.000Đ",
+            image:"https://product.hstatic.net/1000133495/product/92717350_1550460445148889_2896197718726672384_o_96b5113398494a6d822ad0eb2ec93f14_master.jpg",
+            status : "Nam"
+        },
+        {
+            id:4,
+            name:"The Cosmo (Đen) Quần short kaki",
+            code:"TC1022011BA",
+            price: "300.000Đ",
+            image:"https://cf.shopee.vn/file/dc61b5a7d14f5ad85ca1a4e81e8dcf75",
+            status : "Nam"
+        } ]
+        var fwomen = [
+        {
+            id:1,
+            name:"Váy Fashion",
+            code:"TC1022011BA",
+            price: "250.000Đ",
+            image:"https://bizweb.dktcdn.net/100/409/545/products/262025818-3089178968068377-6635938409906308020-n.jpg?v=1638258195347",
+            status : "Nữ"
+        },
+        {
+            id:2,
+            name:"Áo thun phối váy ngắn",
+            code:"TC1022011BA",
+            price: "390.000Đ",
+            image:"https://daynitda.com/wp-content/uploads/2021/10/cach-phoi-do-voi-chan-vay-ngan.jpg",
+            status : "Nữ"
+        },
+        {
+            id:3,
+            name:"Áo khoác",
+            code:"TC1022011BA",
+            price: "300.000Đ",
+            image:"https://cbu01.alicdn.com/img/ibank/O1CN01C7Hf8X1dpZqmBmA1m_!!2210949963785-0-cib.jpg",
+            status : "Nữ"
+        },
+        {
+            id:4,
+            name:"Áo thun",
+            code:"TC1022011BA",
+            price: "300.000Đ",
+            image:"https://sakurafashion.vn/upload/sanpham/large/70121-ao-thun-nu-hinh-chu-ga-con-1.jpg",
+            status : "Nữ"
+        }
+        ]
+
+            function men() {
+                var fashionwomen = document.getElementById("women");
+                fashionwomen.style.display="none";
+                for (let i = 0; i <= fmen.length -1 ; i++){
+                    var  demo = '<div class="col-3">';
+                    demo += '<div class="card" style="width: 18rem;">';
+                    demo += '<img class="card-img-top" src="'+fmen[i].image +'" alt="Card image cap">'
+                    demo += '<div class="card-body">';
+                    demo += '<h5 class="card-title">'+fmen[i].name +'</h5>';
+                    demo += '<p class="card-text">'+fmen[i].price +'</p>';
+                    demo += '<div class = "btnX"><a href="#" class="btn btn-outline-success">Đặt mua</a></div>';
+                    demo += '</div>';
+                    demo += ' </div>';
+                    demo += '</div>';
+                    document.getElementById("men").innerHTML += demo;
+                }
+                
+            }
+            function  women(){
+                var fashionmen = document.getElementById("men");
+                fashionmen.style.display="none";
+                for (let i = 0; i <= fwomen.length -1 ; i++){
+                    var  demo = '<div class="col-3">';
+                    demo += '<div class="card" style="width: 18rem;">';
+                    demo += '<img class="card-img-top" src="'+fwomen[i].image +'" alt="Card image cap">'
+                    demo += '<div class="card-body">';
+                    demo += '<h5 class="card-title">'+fwomen[i].name +'</h5>';
+                    demo += '<p class="card-text">'+fwomen[i].price +'</p>';
+                    demo += '<div class = "btnX"><a href="#" class="btn btn-outline-success">Đặt mua</a></div>';
+                    demo += '</div>';
+                    demo += ' </div>';
+                    demo += '</div>';
+                    document.getElementById("women").innerHTML += demo;
+                }
+            }
+    </script>
+    
+</body>
+</html>
+
+
